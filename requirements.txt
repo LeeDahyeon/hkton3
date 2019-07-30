@@ -169,7 +169,6 @@ Python-EasyConfig==0.1.7
 PyTweening==1.0.3
 pytz==2018.5
 PyWavelets==1.0.0
-pywin32==224
 pywinpty==0.5.4
 PyYAML==3.13
 pyzmq==17.1.2
