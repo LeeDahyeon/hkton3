@@ -52,7 +52,12 @@ def create(request):
     main.title = request.GET['title']
     main.body = request.GET['body']
     main.price = request.GET['price']
+    main.license = request.GET['license']
     main.pub_date = timezone.datetime.now()
     main.image = request.GET['image']
     main.save()
-    return redirect (services)
+    return redirect (services, '/board/'+str(board.id))
+
+def detail(request, board_id):
+    details = get_object_or_404(DjangoBoard, pk=board_id)
+    return render(request, 'detail.html', {'details':details})
